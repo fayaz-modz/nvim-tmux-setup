@@ -14,8 +14,8 @@ $line_break\
 $character"""
 
 [username]
-style_root = 'black bold'
 format = '[$user]($style) '
+style_user = "bold orange"
 disabled = false
 show_always = true
 
@@ -35,9 +35,9 @@ truncation_length = 4
 truncate_to_repo = false
 
 [character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vicmd_symbol = "[❮](green)"
+success_symbol = "[❯](green bold)"
+# error_symbol = "[❯](red bold)"
+# vicmd_symbol = "[❮](green bold)"
 
 [git_branch]
 symbol = " "
@@ -73,7 +73,7 @@ symbol = " "
 
 [time]
 disabled = false
-style = "bold white"
+style = "bold blue"
 format = "[$time]($style)"
 
 [custom.stunnel]
@@ -81,3 +81,9 @@ when = "ps aux | grep stunnel | grep -v grep"
 command = "ps -o etime= -p $(ps aux | grep stunnel | grep -v grep | awk '{print $2}')"
 style = "red"
 format = "[TUNNEL OPEN for $output]($style)"
+
+palette = 'sn'
+
+[palettes.sn]
+blue = "#0000ff"
+orange = "#ff0000"
