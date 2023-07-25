@@ -1,0 +1,11 @@
+theme = "dracula"
+
+[editor]
+true-color = true
+
+[keys.normal.space]
+w = ":w"
+q = ":q"
+
+[keys.insert]
+"A-p" = "normal_mode"

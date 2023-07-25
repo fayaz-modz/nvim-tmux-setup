@@ -15,23 +15,9 @@ return require('packer').startup(function(use)
 
     use 'navarasu/onedark.nvim'
 
-    use({
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup {
-                icons = false,
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    })
-
-
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
-    use("nvim-treesitter/nvim-treesitter-context");
 
     use {
         'VonHeikemen/lsp-zero.nvim',
@@ -65,6 +51,16 @@ return require('packer').startup(function(use)
         },
         tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
     }
+
+    use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+          })
+      end
+    })   
 
     use({
         "aserowy/tmux.nvim",
