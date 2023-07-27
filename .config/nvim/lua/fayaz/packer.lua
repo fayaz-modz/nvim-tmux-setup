@@ -4,65 +4,71 @@
 vim.cmd.packadd('packer.nvim')
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+  -- Packer can manage itself
+  use 'wbthomason/packer.nvim'
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
+
+  use 'navarasu/onedark.nvim'
+
+  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
+  use("mbbill/undotree")
+  use("tpope/vim-fugitive")
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
+
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },       -- Required
+      {                                  -- Optional
+        'williamboman/mason.nvim',
+        run = function()
+          pcall(vim.api.nvim_command, 'MasonUpdate')
+        end,
+      },
+      { 'williamboman/mason-lspconfig.nvim' },       -- Optional
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },           -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },       -- Required
+      { 'L3MON4D3/LuaSnip' },           -- Required
     }
+  }
 
-    use 'navarasu/onedark.nvim'
+  use("folke/zen-mode.nvim")
+  use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use("mbbill/undotree")
-    use("tpope/vim-fugitive")
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',       -- optional, for file icons
+    },
+    tag = 'nightly'                        -- optional, updated every week. (see issue #1193)
+  }
 
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' }, -- Required
-            {                  -- Optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.api.nvim_command, 'MasonUpdate')
-                end,
-            },
-            { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+  use({
+    "kylechui/nvim-surround",
+    tag = "*",     -- Use for stability; omit to use `main` branch for the latest features
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end
+  })
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
-            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
-        }
-    }
-
-    use("folke/zen-mode.nvim")
-    use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
-
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-            'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        tag = 'nightly'                    -- optional, updated every week. (see issue #1193)
-    }
-
-    use({
-        "kylechui/nvim-surround",
-        tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-        config = function()
-            require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
-            })
-        end
-    })
-
-    use({
-        "aserowy/tmux.nvim",
-        config = function() return require("tmux").setup() end
-    })
+  use({
+    "aserowy/tmux.nvim",
+    config = function() return require("tmux").setup() end
+  })
 end)
