@@ -13,11 +13,13 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use 'navarasu/onedark.nvim'
+  use 'Mofiqul/dracula.nvim'
 
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
+  use("lewis6991/gitsigns.nvim")
+
   use {
     'numToStr/Comment.nvim',
     config = function()
@@ -30,21 +32,23 @@ return require('packer').startup(function(use)
     branch = 'v2.x',
     requires = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },       -- Required
-      {                                  -- Optional
+      { 'neovim/nvim-lspconfig' }, -- Required
+      {                            -- Optional
         'williamboman/mason.nvim',
         run = function()
           pcall(vim.api.nvim_command, 'MasonUpdate')
         end,
       },
-      { 'williamboman/mason-lspconfig.nvim' },       -- Optional
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },           -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },       -- Required
-      { 'L3MON4D3/LuaSnip' },           -- Required
+      { 'hrsh7th/nvim-cmp' },     -- Required
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'L3MON4D3/LuaSnip' },     -- Required
     }
   }
+
+  use 'Exafunction/codeium.vim'
 
   use("folke/zen-mode.nvim")
   use { 'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim' }
@@ -52,14 +56,14 @@ return require('packer').startup(function(use)
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
-      'nvim-tree/nvim-web-devicons',       -- optional, for file icons
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
-    tag = 'nightly'                        -- optional, updated every week. (see issue #1193)
+    tag = 'nightly'                  -- optional, updated every week. (see issue #1193)
   }
 
   use({
     "kylechui/nvim-surround",
-    tag = "*",     -- Use for stability; omit to use `main` branch for the latest features
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
     config = function()
       require("nvim-surround").setup({
         -- Configuration here, or leave empty to use defaults

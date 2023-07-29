@@ -15,13 +15,15 @@ vim.keymap.set("n", "N", "Nzzzv")
 
 -- set exit to normal mode
 vim.keymap.set("i", ";q", "<ESC>")
+vim.keymap.set("v", ";q", "<ESC>")
 
--- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
-
--- next greatest remap ever : asbjornHaland
+-- copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+-- paste from system clipboard
+vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>P", [["+P]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
