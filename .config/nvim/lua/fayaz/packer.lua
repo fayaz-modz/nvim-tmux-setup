@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
   }
 
   use 'Mofiqul/dracula.nvim'
+  use 'rcarriga/nvim-notify'
 
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use("mbbill/undotree")

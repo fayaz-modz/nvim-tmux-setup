@@ -17,6 +17,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", ";q", "<ESC>")
 vim.keymap.set("v", ";q", "<ESC>")
 
+-- disable keymap for C-i 
+-- remap C-i to goto beginning of line in insert mode 
+vim.keymap.set("i", "<C-h>", "<C-o>^")
+
+-- goto end of the line in insert mode
+vim.keymap.set("i", "<C-l>", "<END>")
+
 -- copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])

@@ -1,0 +1,497 @@
+clear
+exit
+cursor
+help
+clear
+version
+starship init nu | save -f ~/.cache/starship/init.nu
+$nu.config-path
+nvim ../.config/nushell/config.nu
+$nu.config-path
+nvim ../.config/nushell/config.nu
+exit
+http
+which http
+sudo apt remove http
+exit
+starship
+starship init
+starship init nu
+exit
+$nu.env-path
+nvim env.nu
+nvim config.nu
+clear
+exit
+nvim ../.config/nushell/config.nu
+exit
+starship
+clear
+starship init nu | save -f ~/.cache/starship/init.nu
+nvim ~/.cache/starship/init.nu
+exit
+$env.STARSHIP_SHELL = "nu"<\n><\n>def create_left_prompt [] {<\n>    starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'<\n>}<\n><\n># Use nushell functions to define your right and left prompt<\n>$env.PROMPT_COMMAND = { || create_left_prompt }<\n>$env.PROMPT_COMMAND_RIGHT = ""<\n><\n># The prompt indicators are environmental variables that represent<\n># the state of the prompt<\n>$env.PROMPT_INDICATOR = ""<\n>$env.PROMPT_INDICATOR_VI_INSERT = ": "<\n>$env.PROMPT_INDICATOR_VI_NORMAL = "〉"<\n>$env.PROMPT_MULTILINE_INDICATOR = "::: "
+clear
+ls
+clear
+exit
+$env.STARSHIP_SHELL = "nu"<\n><\n>def create_left_prompt [] {<\n>    starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'<\n>}<\n><\n># Use nushell functions to define your right and left prompt<\n>$env.PROMPT_COMMAND = { || create_left_prompt }<\n>$env.PROMPT_COMMAND_RIGHT = ""<\n><\n># The prompt indicators are environmental variables that represent<\n># the state of the prompt<\n>$env.PROMPT_INDICATOR = ""<\n>$env.PROMPT_INDICATOR_VI_INSERT = ": "<\n>$env.PROMPT_INDICATOR_VI_NORMAL = "〉"<\n>$env.PROMPT_MULTILINE_INDICATOR = "::: "
+clear
+cd
+ls
+cd Desktop/planty/
+ls
+cd planty_homes/
+clear
+ls
+$env.STARSHIP_SHELL = "nu"<\n><\n>def create_left_prompt [] {<\n>    starship prompt --cmd-duration $env.CMD_DURATION_MS<\n>}<\n><\n># Use nushell functions to define your right and left prompt<\n>$env.PROMPT_COMMAND = { || create_left_prompt }<\n>$env.PROMPT_COMMAND_RIGHT = ""<\n><\n># The prompt indicators are environmental variables that represent<\n># the state of the prompt<\n>$env.PROMPT_INDICATOR = ""<\n>$env.PROMPT_INDICATOR_VI_INSERT = ": "<\n>$env.PROMPT_INDICATOR_VI_NORMAL = "〉"<\n>$env.PROMPT_MULTILINE_INDICATOR = "::: "
+exit
+$env.STARSHIP_SHELL = "nu"<\n><\n>def create_left_prompt [] {<\n>    starship prompt<\n>}<\n><\n># Use nushell functions to define your right and left prompt<\n>$env.PROMPT_COMMAND = { || create_left_prompt }<\n>$env.PROMPT_COMMAND_RIGHT = ""<\n><\n># The prompt indicators are environmental variables that represent<\n># the state of the prompt<\n>$env.PROMPT_INDICATOR = ""<\n>$env.PROMPT_INDICATOR_VI_INSERT = ": "<\n>$env.PROMPT_INDICATOR_VI_NORMAL = "〉"<\n>$env.PROMPT_MULTILINE_INDICATOR = "::: "
+clear
+starship prompt
+clear
+exit
+clear
+exit
+clear
+exit
+starship
+starship prompt --help
+exit
+nu
+starship prompt --terminal-width 166
+starship prompt --terminal-width 200
+starship prompt --terminal-width 180
+starship prompt --terminal-width 155
+starship prompt --terminal-width 157
+starship prompt --terminal-width 160
+starship prompt --terminal-width 170
+starship prompt --terminal-width 165
+starship prompt --terminal-width 166
+exit
+nu
+exit
+width
+terminal
+term.size
+$term.size
+term size
+term size.columns
+(term size).columns
+clear
+exit
+term size
+clear
+nvim ~/.cache/starship/init.nu
+exit
+nvim env.nu
+nvim ~/.cache/starship/init.nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+exit
+nu
+nvim env.nu
+tput
+tpu -c
+exit
+nu
+tput -c
+^tput -c
+exit
+cd .config/nushell/
+nvim env.nu
+clear
+exit
+nu
+clear
+exit
+clear
+ls
+exit
+cd .config/nushell/
+nvim
+clear
+exit
+ls
+coreutils
+cargo
+clear
+bash
+zsh
+clear
+cd .config/nushell/
+clear
+nvim
+bash
+nvim
+$env | table -e
+$env | table 
+$env | table  -e
+$env.PATH | table
+$env.PATH | table -e
+export 
+clear
+ls
+cd ..
+ls
+ls -l
+du | table -e
+dust
+clear
+cd ../.cargo
+ls
+cd bin
+ls
+cd .
+..
+ls
+nvim env
+clear
+nvim
+clear
+cd bin
+ls
+./dust
+./dust | table
+./dust | table -e
+clear
+ls
+cd ..
+ls
+clear
+cd ..
+clear
+nvim .config/nushell/
+cd .config/nushell/
+nvim
+clear
+exit
+nvim .config/nushell/env.nu
+exit
+nvim .config/nushell/env.nu
+nu
+exit
+nvim .config/nushell/env.nu
+exit
+nvim .config/nushell/env.nu
+exit
+nvim .config/nushell/env.nu
+exit
+bash
+exit
+echo $PATh
+echo PATH
+echo "$PATH"
+echo $PATH
+nvim .config/nushell/env.nu
+clear
+nvim .config/nushell/env.nu
+clear
+nvim .config/nushell/env.nu
+exit
+nu
+nvim .config/nushell/env.nu
+^echo \$PATH
+^"echo $PATH"
+^echo ^$PATH
+^echo $PATh
+nvim .config/nushell/env.nu
+clear
+n
+exit
+nu
+exit
+nvim .config/nushell/env.nu
+exit
+nu
+exit
+$env.ANDROID_HOME
+exit
+nvim .config/nushell/env.nu
+exit
+nu
+nvim .config/nushell/env.nu
+exit
+nu
+nvim .config/nushell/env.nu
+exit
+nu
+nvim .config/nushell/env.nu
+exit
+nu
+nvim .config/nushell/env.nu
+exit
+nu
+exit
+echo $env.path
+echo $env.PATH
+clear
+adb devices
+clear
+exit
+nvim .config/nushell/env.nu
+clear
+exit
+nu
+exit
+tmux
+exit
+bash
+exit
+clear
+ls
+cd .config
+ls
+thunar
+cd gh
+ls
+nvim hosts.yml
+cd ..
+ls
+gitui
+cargo
+cargo install gitui
+nvim .config/nushell/env.nu
+cd ..
+nvim .config/nushell/env.nu
+cd .cargo/bin
+ls
+cargo install gitui
+clear
+$env.RUSTC_WRAPPER = "sccache"
+cargo install gitui
+clear
+sccache cargo install atuin
+curl https://raw.githubusercontent.com/atuin/main/install.sh | bash
+ls
+clear
+bash <(curl https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh)
+bash
+cargo install atuin
+clear
+nvim .config/nushell/env.nu
+cd
+nvim .config/nushell/env.nu
+exi
+exit
+nu
+nvim .config/nushell/env.nu
+atuin init nu
+clear
+exit
+nu
+nvim .config/nushell/env.nu
+atuin init nu
+let-env conf
+clear
+nv
+nvim .config/nushell/env.nu
+clear
+history
+clear
+z autin
+autin
+atuin
+atuin history
+clear
+atuin import auto
+clear
+exit
+nu
+exit
+cargo install --locked bacon
+cd Desktop/planty/planty_server/
+cd 
+cd .config/nvim/
+gitui
+clear
+cd 
+cd Downloads/nvim-tmux-setup/.config/
+ls
+mkdir gitui
+cd gitui/
+touch key_bindings.ron
+nvim
+clear
+ln -s /home/fayaz/Downloads/nvim-tmux-setup/.config/* /home/fayaz/.config/*
+ls
+cd ..
+ls
+ln -s /home/fayaz/Downloads/nvim-tmux-setup/.config/gitui /home/fayaz/.config/
+gitui
+cd
+cd .config/gitui/
+ls
+nvim 
+mv theme.ron ../../Downloads/nvim-tmux-setup/.config/gitui/
+cd ..
+rm gitui/ -r
+ln -s /home/fayaz/Downloads/nvim-tmux-setup/.config/gitui /home/fayaz/.config/
+gitui
+cd nvim/
+gitui
+clear
+cd
+ls
+nvim .bashrc
+cd
+ls
+cd .config
+ls
+cd nushell/
+ls
+cp env.nu ../../Downloads/nvim-tmux-setup/.config/nushell/env.nu -f
+cp env.nu ../../Downloads/nvim-tmux-setup/.config/nushell/env.nu -r
+cd ..
+cp nushell/ ../Downloads/nvim-tmux-setup/.config/
+sudo rm nushell -r; ln -s /home/fayaz/Downloads/nvim-tmux-setup/.config/nushell /home/fayaz/.config/
+ls
+cd nushell
+ls
+exit
+cd
+cd Downloads/nvim-tmux-setup/.config/
+ls
+cd nushell/
+nvim
+clear
+cd ..
+ls
+cd nvim/
+ls
+cat README.md
+cd lua/
+ls
+nvim
+clear
+nvim
+clear
+nvim
+cd ..
+cd after/plugin/
+nvim colors.lua
+clear
+nvim colors.lua
+..
+ls
+..
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim
+nvi
+nvim
+clear
+nvim
+exit
+cd Downloads/nvim-tmux-setup/.config/nvim/
+nvim
+clear
+nvim
+clear
+nvim
+clear
+nvim
+ncim
+nvim
+clear
+nvim
+vim
+nvim
+nvim after/plugin/colors.lua
+nvim
+clear
+nvim
+nvim after/plugin/colors.lua
+clear
+exit
+nvim after/plugin/colors.lua
+$env.config.cursor_shape = "blinking_block"
+$env.config.cursor_shape=block
+$env.config.cursor_shape = block
+$env.config.cursor_shape = "underscore"
+$env.config.cursor_shape.emacs = "blinking_block"
+$env.config.cursor_shape.emacs = "blink_block"
+$env.config.cursor_shape.emacs = "block"
+clear
+exit
+tmux
+exit
+clear
+nvim after/plugin/colors.lua
+clear
+exit
+clear
+nvim after/plugin/colors.lua
+cd Downloads/nvim-tmux-setup/.config/nvim/
+nvim after/plugin/colors.lua
+exit
+clear
+ls
+cd Downloads/nvim-tmux-setup/.config/nvim/
+ls
+clear
+cd after/plugin/
+ls
+cd ..
+cd .
+cd ..
+nvim after/plugin/colors.lua
+clear
+nvim after/plugin/colors.lua
+clear
+nvim after/plugin/colors.lua
+clear
+ls
+nvim after/plugin/colors.lua
+cd ../..
+ls
+clear
+nvim .gitignore
+batcat .gitignore
+nvim 
+clear
+ls
+la
+exa -a
+ll
+dust
+clear
+ls
+nvim
+l
+l -c
+exa -c
+nvim
+gac
+exit
+cd Downloads/nvim-tmux-setup/
+gac
+clear
+ls
+nvim
+gac
+nvim 
