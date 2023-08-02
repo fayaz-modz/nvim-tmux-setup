@@ -495,3 +495,18 @@ ls
 nvim
 gac
 nvim 
+gac
+gi add .
+git add .
+ls
+lazygit
+clear
+ls
+user
+clear
+ls
+nvim .gitignore
+git log
+clear
+ls
+nvim
